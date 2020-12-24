@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  webapi:
+    image: warehouse-webapi
+    environment:
+      - dotnet=Development
+    build:
+      context: .
+      dockerfile: Warehouse.WebApi/Dockerfile
+    ports:
+       - "1356:80"
